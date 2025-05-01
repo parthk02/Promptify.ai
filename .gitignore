@@ -1,0 +1,43 @@
+# === LOG FILES ===
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# === NODE MODULES ===
+client/node_modules/
+server/node_modules/
+
+# === BUILD OUTPUT ===
+dist/
+dist-ssr/
+build/
+
+# === ENV FILES ===
+.env
+.env.local
+client/.env
+server/.env
+
+# === SYSTEM FILES ===
+.DS_Store
+*.local
+
+# === IDEs & EDITORS ===
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# === OTHER ===
+*.tgz
+*.zip
+*.bak
+*.tmp
