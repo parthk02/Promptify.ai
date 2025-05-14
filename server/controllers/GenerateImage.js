@@ -8,10 +8,11 @@ dotenv.config();
 export const generateImage = async (req, res, next) => {
   try {
     const { prompt } = req.body;
-
+        console.log("📥 Prompt received:", prompt); // Log input prompt
+    console.log("🔑 Hugging Face Token prefix:", process.env.HUGGINGFACE_API_TOKEN?.slice(0, 5));
     const response = await axios({
       method: "POST",
-      url: "https://api-inference.huggingface.co/models/black-forest-labs/FLUX.1-dev",  // <- IMPORTANT: replace with your model name
+      url: "https://api-inference.huggingface.co/models/black-forest-labs/FLUX.1-dev",  // 
       headers: {
         Authorization: `Bearer ${process.env.HUGGINGFACE_API_TOKEN}`,
         "Content-Type": "application/json",
